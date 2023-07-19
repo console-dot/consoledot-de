@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 export const Header = () => {
   const navigate = useNavigate();
   return (
-    <Box sx={{ background: '#f9f9f9' }} p={3} py={8} id="Home">
+    <Box sx={{ background: '#f9f9f9' }} p={3} py={8} id='Home'>
       <Container maxWidth='xl'>
         <Grid container display={'flex'} alignItems='center' my={3} spacing={2}>
           <Grid
@@ -24,13 +24,8 @@ export const Header = () => {
           </Grid>
           <Grid item sm={12} md={6} p={2} py={5}>
             <Typography variant='h4' component={'h1'} mb={2}>
-              WELCOME TO <span style={{ color: '#0D7789' }}>CONSOLE</span>
-              <span style={{ color: '#224575' }}>DOT</span>
-            </Typography>
-            <Typography variant='body1' component={'p'} mb={1}>
-              We represents the connected world, offering innovative and
-              customer-centric information technology experiences, enabling
-              Enterprises, Associates and the Society to Rise.
+              <span style={{ color: '#0D7789' }}>CONSOLE</span>
+              <span style={{ color: '#224575' }}>DOT</span> PRODUCTS
             </Typography>
             <Typography variant='body1' component={'p'} mb={3}>
               We are dedicated to providing high-quality software solutions to
@@ -53,7 +48,7 @@ export const Header = () => {
               }}
               onClick={() => navigate('/contact us')}
             >
-              Contact Us
+              Be Our Customer
             </Button>
           </Grid>
           <Grid

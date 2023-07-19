@@ -1,17 +1,19 @@
-import { Box, Button, Typography } from "@mui/material";
-import { Overlay } from "../Overlay";
-import { Facebook, LinkedIn, Twitter } from "@mui/icons-material";
-import Typewriter from "typewriter-effect";
-import { useRef } from "react";
+import { Box, Button, Typography } from '@mui/material';
+import { Overlay } from '../Overlay';
+import { Facebook, LinkedIn, Twitter } from '@mui/icons-material';
+import Typewriter from 'typewriter-effect';
+import { useRef } from 'react';
 
-export const HomeBanner = () => {
+export const HomeBanner = ({ setShow }) => {
   const handleHide = () => {
-    ref.current.style.top = "-150%";
+    ref.current.style.top = '-150%';
     window.scrollTo({
       top: 0,
     });
     setTimeout(() => {
-      ref.current.style.display = "none";
+      ref.current.style.display = 'none';
+      setShow('false');
+      localStorage.setItem('@HomeBanner', 'false');
     }, 0.6 * 1000);
   };
   const ref = useRef(null);
@@ -20,51 +22,51 @@ export const HomeBanner = () => {
       ref={ref}
       sx={{
         backgroundImage: "url('images/banner.jpeg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        width: "100%",
-        minHeight: "100vh",
-        position: "fixed",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+        minHeight: '100vh',
+        position: 'fixed',
         zIndex: 99,
         top: 0,
         left: 0,
-        transition: "all 0.6s",
+        transition: 'all 0.6s',
       }}
     >
       <Overlay />
       <Box
         sx={{
-          position: "relative",
+          position: 'relative',
           zIndex: 2,
-          width: "100%",
-          height: "100vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: { md: "center", sm: "flex-start", xs: "flex-start" },
-          textAlign: { md: "center", sm: "left", xs: "left" },
-          padding: "2rem",
+          width: '100%',
+          height: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: { md: 'center', sm: 'flex-start', xs: 'flex-start' },
+          textAlign: { md: 'center', sm: 'left', xs: 'left' },
+          padding: '2rem',
           //   mb: 3,
           //   mt: 3,
         }}
       >
         <Box
           sx={{
-            color: "#fff",
+            color: '#fff',
             fontSize: 32,
-            fontFamily: "monospace",
+            fontFamily: 'monospace',
             fontWeight: 700,
             width: {
               md: 520,
-              sm: "calc(100%)",
-              xs: "calc(100%)",
+              sm: 'calc(100%)',
+              xs: 'calc(100%)',
             },
-            wordBreak: "break-all",
+            wordBreak: 'break-all',
           }}
         >
           <img
-            src="/images/logo.png"
-            alt="Logo"
+            src='/images/logo.png'
+            alt='Logo'
             style={{
               borderRadius: 30,
               width: 160,
@@ -72,29 +74,29 @@ export const HomeBanner = () => {
             }}
           />
           <Typography
-            sx={{ fontFamily: "monospace", fontWeight: 700 }}
-            variant="h3"
-            component="h1"
+            sx={{ fontFamily: 'monospace', fontWeight: 700 }}
+            variant='h3'
+            component='h1'
           >
-            <span style={{ color: "#0D7789" }}>CONSOLE</span>
-            <span style={{ color: "#224575" }}>DOT</span>
+            <span style={{ color: '#0D7789' }}>CONSOLE</span>
+            <span style={{ color: '#224575' }}>DOT</span>
           </Typography>
           <Typography
-            sx={{ fontFamily: "monospace", fontWeight: 700 }}
-            variant="h6"
-            component="h2"
+            sx={{ fontFamily: 'monospace', fontWeight: 700 }}
+            variant='h6'
+            component='h2'
             mb={2}
           >
             INNOVATE THE TECHNOLOGY
           </Typography>
           <Box
-            display={"flex"}
-            alignItems="center"
+            display={'flex'}
+            alignItems='center'
             sx={{
               justifyContent: {
-                md: "center",
-                sm: "flex-start",
-                xs: "flex-start",
+                md: 'center',
+                sm: 'flex-start',
+                xs: 'flex-start',
               },
             }}
             columnGap={3}
@@ -102,23 +104,23 @@ export const HomeBanner = () => {
           >
             <Facebook
               sx={{
-                color: "#fff",
-                fontSize: "32px",
-                "&:hover": { color: "#0D7789" },
+                color: '#fff',
+                fontSize: '32px',
+                '&:hover': { color: '#0D7789' },
               }}
             />
             <LinkedIn
               sx={{
-                color: "#fff",
-                fontSize: "32px",
-                "&:hover": { color: "#0D7789" },
+                color: '#fff',
+                fontSize: '32px',
+                '&:hover': { color: '#0D7789' },
               }}
             />
             <Twitter
               sx={{
-                color: "#fff",
-                fontSize: "32px",
-                "&:hover": { color: "#0D7789" },
+                color: '#fff',
+                fontSize: '32px',
+                '&:hover': { color: '#0D7789' },
               }}
             />
           </Box>
@@ -133,18 +135,18 @@ export const HomeBanner = () => {
               ],
               autoStart: true,
               loop: true,
-              cursor: "",
+              cursor: '',
               delay: 0.5,
               deleteSpeed: 0.5,
             }}
           />
           <Button
             onClick={handleHide}
-            variant="outlined"
+            variant='outlined'
             sx={{
-              color: "#fff",
-              borderColor: "#0D7789",
-              "&:hover": { background: "#0D7789", borderColor: "#0D7789" },
+              color: '#fff',
+              borderColor: '#0D7789',
+              '&:hover': { background: '#0D7789', borderColor: '#0D7789' },
             }}
           >
             Learn More
