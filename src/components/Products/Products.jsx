@@ -16,7 +16,6 @@ import {
   FILE_URL,
   getAllCategories,
   getAllProducts,
-  getSingleCategory,
 } from '../../api';
 
 export const Products = () => {

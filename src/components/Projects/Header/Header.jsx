@@ -1,4 +1,4 @@
-import { Container, Grid, Typography, Button, Box } from '@mui/material';
+import { Container, Grid, Typography, Box } from '@mui/material';
 import { FILE_URL } from '../../../api';
 
 export const Header = ({ title, logo }) => {

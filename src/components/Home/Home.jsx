@@ -29,7 +29,7 @@ export const Home = () => {
   };
   useEffect(() => {
     gotoSection();
-  }, [window.location.search]);
+  }, []);
   return (
     <Layout>
       {show === 'true' && <HomeBanner setShow={setShow} />}
