@@ -81,6 +81,7 @@ export const Footer = () => {
                     display="flex"
                     alignItems={"center"}
                     columnGap={1.5}
+                    target="_blank"
                     href="https://goo.gl/maps/QYF5w43v3k3Aynmx8"
                   >
                     <Map /> Ahmed Arcade, Suite 9, 1st Floor, Ferozpur Rd,
@@ -95,6 +96,7 @@ export const Footer = () => {
                     display="flex"
                     alignItems={"center"}
                     columnGap={1.5}
+                    target="_blank"
                     href="mailto:info@consoledot.com"
                   >
                     <Mail /> info@consoledot.com
@@ -108,6 +110,7 @@ export const Footer = () => {
                     display="flex"
                     alignItems={"center"}
                     columnGap={1.5}
+                    target="_blank"
                     href="tel:+92-327-406-7437"
                   >
                     <Phone /> +92-327-406-7437

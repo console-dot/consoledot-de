@@ -1,13 +1,11 @@
-import { Footer, Home, HomeBanner, Navbar } from "./components";
+import { Route, Routes } from 'react-router-dom';
+import { Footer, Home, HomeBanner, Navbar } from './components';
 
 const App = () => {
   return (
-    <div>
-      <HomeBanner />
-      <Navbar />
-      <Home />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path='/' element={<Home />} />
+    </Routes>
   );
 };
 
