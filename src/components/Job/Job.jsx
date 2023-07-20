@@ -29,7 +29,7 @@ export const Job = () => {
       name: `${formData.get("fname")} ${formData.get("lname")}`,
       email: formData.get("email"),
       phone: formData.get("phone"),
-      job_ref: formData.get("job_ref"),
+      job_ref: job?._id,
       myFile: formData.get("myFile"),
     }).then(() => {
       setToast(true);
@@ -54,8 +54,8 @@ export const Job = () => {
         <Typography variant="h3" component={"h1"} mb={7} textAlign={"center"}>
           {job?.title}
         </Typography>
-        <Grid container spacing={2}>
-          <Grid item sm={12} md={6} p={7}>
+        <Grid container spacing={2} columnSpacing={7}>
+          <Grid item sm={12} md={6}>
             <Typography
               variant="h4"
               component={"h2"}
@@ -105,7 +105,7 @@ export const Job = () => {
 
             {/* <Chip label="Chip Outlined" variant="outlined" /> */}
           </Grid>
-          <Grid item sm={12} md={6} p={7}>
+          <Grid item sm={12} md={6}>
             <Typography
               variant="h4"
               component={"h2"}
@@ -167,7 +167,6 @@ export const Job = () => {
                   />
                 </Grid>
               </Grid>
-              <input type="hidden" name="job_ref" value={job?._id} />
               <Button
                 variant="contained"
                 sx={{
