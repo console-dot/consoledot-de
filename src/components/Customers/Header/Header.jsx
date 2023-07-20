@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <Box sx={{ background: '#f9f9f9' }} p={3} py={8} id='Home'>
       <Container maxWidth='xl'>
-        <Grid container display={'flex'} alignItems='center' my={3} spacing={2}>
+        <Grid container display={'flex'} alignItems='center' justifyContent={"center"} my={3} spacing={2}>
           <Grid
             item
             sm={12}

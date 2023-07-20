@@ -5,9 +5,9 @@ import {
   Snackbar,
   TextField,
   Typography,
-} from '@mui/material';
-import { useState } from 'react';
-import { sendMessage } from '../../../api';
+} from "@mui/material";
+import { useState } from "react";
+import { sendMessage } from "../../../api";
 
 export const Contact = () => {
   const [toast, setToast] = useState(false);
@@ -17,10 +17,10 @@ export const Contact = () => {
     setDisableSend(true);
     const formData = new FormData(e.currentTarget);
     sendMessage({
-      fname: formData.get('fname'),
-      lname: formData.get('lname'),
-      email: formData.get('email'),
-      message: formData.get('message'),
+      fname: formData.get("fname"),
+      lname: formData.get("lname"),
+      email: formData.get("email"),
+      message: formData.get("message"),
     }).then(() => {
       setToast(true);
       e.target.reset();
@@ -29,68 +29,75 @@ export const Contact = () => {
   };
   return (
     <>
-      <Container maxWidth='xl' id='Contact Us'>
-        <Grid container display={'flex'} alignItems='center' my={3} spacing={4}>
+      <Container maxWidth="xl" id="Contact Us">
+        <Grid
+          container
+          display={"flex"}
+          alignItems="center"
+          justifyContent={"center"}
+          my={3}
+          spacing={4}
+        >
           <Grid
             item
             sm={12}
             md={6}
             p={2}
             py={5}
-            textAlign={'center'}
-            sx={{ display: { md: 'block', sm: 'none', xs: 'none' } }}
+            textAlign={"center"}
+            sx={{ display: { md: "block", sm: "none", xs: "none" } }}
           >
             <img
-              src='/images/logo.png'
-              alt='Logo'
-              style={{ borderRadius: 10, width: '50%', marginRight: 12 }}
+              src="/images/logo.png"
+              alt="Logo"
+              style={{ borderRadius: 10, width: "50%", marginRight: 12 }}
             />
           </Grid>
           <Grid item sm={12} md={6} p={2} py={5}>
-            <Typography variant='h4' component={'h1'} mb={2}>
+            <Typography variant="h4" component={"h1"} mb={2}>
               GET IT TOUCH
             </Typography>
-            <Typography variant='body1' component={'p'} mb={3}>
+            <Typography variant="body1" component={"p"} mb={3}>
               Are you ready to embrace the power of technology and elevate your
               business to new heights? Contact us today to discuss your project
               requirements. Let ConsoleDot be your trusted partner on your
               journey to success.
             </Typography>
-            <form method='POST' onSubmit={handleSendMessage}>
+            <form method="POST" onSubmit={handleSendMessage}>
               <Grid container spacing={2} mb={3}>
-                <Grid item width={'100%'} sm={6}>
+                <Grid item width={"100%"} sm={6}>
                   <TextField
-                    name='fname'
-                    placeholder='First Name'
-                    label='First Name'
+                    name="fname"
+                    placeholder="First Name"
+                    label="First Name"
                     fullWidth
                     required
                   />
                 </Grid>
-                <Grid item width={'100%'} sm={6}>
+                <Grid item width={"100%"} sm={6}>
                   <TextField
-                    name='lname'
-                    placeholder='Last Name'
-                    label='Last Name'
+                    name="lname"
+                    placeholder="Last Name"
+                    label="Last Name"
                     fullWidth
                     required
                   />
                 </Grid>
-                <Grid item width={'100%'} sm={12}>
+                <Grid item width={"100%"} sm={12}>
                   <TextField
-                    name='email'
-                    type={'email'}
-                    placeholder='Email Address'
-                    label='Email Address'
+                    name="email"
+                    type={"email"}
+                    placeholder="Email Address"
+                    label="Email Address"
                     fullWidth
                     required
                   />
                 </Grid>
-                <Grid item width={'100%'} sm={12}>
+                <Grid item width={"100%"} sm={12}>
                   <TextField
-                    name='message'
-                    placeholder='Message'
-                    label='Message'
+                    name="message"
+                    placeholder="Message"
+                    label="Message"
                     multiline
                     rows={5}
                     fullWidth
@@ -99,18 +106,18 @@ export const Contact = () => {
                 </Grid>
               </Grid>
               <Button
-                variant='contained'
+                variant="contained"
                 sx={{
-                  color: '#fff',
-                  borderColor: '#224575',
-                  background: '#224575',
-                  '&:hover': {
-                    background: '#0D7789',
-                    borderColor: '#0D7789',
-                    color: '#fff',
+                  color: "#fff",
+                  borderColor: "#224575",
+                  background: "#224575",
+                  "&:hover": {
+                    background: "#0D7789",
+                    borderColor: "#0D7789",
+                    color: "#fff",
                   },
                 }}
-                type='submit'
+                type="submit"
                 disabled={disableSend}
               >
                 Send Message
@@ -123,7 +130,7 @@ export const Contact = () => {
         open={toast}
         autoHideDuration={6000}
         onClose={() => setToast(false)}
-        message={'Message Sent'}
+        message={"Message Sent"}
       />
     </>
   );

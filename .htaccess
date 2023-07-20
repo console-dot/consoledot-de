@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /
+
+# Handle requests for files or directories that exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other requests to the index.html file
+RewriteRule ^ index.html [L]
