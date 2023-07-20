@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 
 import { Mail, Map, Phone } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -39,9 +40,9 @@ export const Footer = () => {
                 <ListItem>
                   <Typography
                     variant="body2"
-                    component={"a"}
+                    component={Link}
                     sx={{ color: "#fff" }}
-                    href="#"
+                    to="/customers"
                   >
                     Customers
                   </Typography>
@@ -49,9 +50,9 @@ export const Footer = () => {
                 <ListItem>
                   <Typography
                     variant="body2"
-                    component={"a"}
                     sx={{ color: "#fff" }}
-                    href="#"
+                    component={Link}
+                    to="/technologies"
                   >
                     Technologies
                   </Typography>
@@ -59,9 +60,9 @@ export const Footer = () => {
                 <ListItem>
                   <Typography
                     variant="body2"
-                    component={"a"}
                     sx={{ color: "#fff" }}
-                    href="#"
+                    component={Link}
+                    to="/careers"
                   >
                     Careers
                   </Typography>

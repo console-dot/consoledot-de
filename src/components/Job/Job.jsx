@@ -8,10 +8,10 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import {
+  applyNow,
   getSingleCity,
   getSingleDepartment,
   getSingleJob,
-  sendMessage,
 } from "../../api";
 import { Layout } from "../Layout";
 
@@ -25,11 +25,12 @@ export const Job = () => {
     e.preventDefault();
     setDisableSend(true);
     const formData = new FormData(e.currentTarget);
-    sendMessage({
-      fname: formData.get("fname"),
-      lname: formData.get("lname"),
+    applyNow({
+      name: `${formData.get("fname")} ${formData.get("lname")}`,
       email: formData.get("email"),
-      message: formData.get("message"),
+      phone: formData.get("phone"),
+      job_ref: formData.get("job_ref"),
+      myFile: formData.get("myFile"),
     }).then(() => {
       setToast(true);
       e.target.reset();
@@ -158,7 +159,7 @@ export const Job = () => {
                     CV/Resume *
                   </Typography>
                   <TextField
-                    name="cv"
+                    name="myFile"
                     id="cv"
                     type={"file"}
                     fullWidth
@@ -166,7 +167,7 @@ export const Job = () => {
                   />
                 </Grid>
               </Grid>
-              <input type="hidden" name="job_id" value={job?._id} />
+              <input type="hidden" name="job_ref" value={job?._id} />
               <Button
                 variant="contained"
                 sx={{
@@ -182,7 +183,7 @@ export const Job = () => {
                 type="submit"
                 disabled={disableSend}
               >
-                Apply for this job
+                {!disableSend ? "Apply for this job" : "Sending..."}
               </Button>
             </form>
           </Grid>
@@ -192,7 +193,7 @@ export const Job = () => {
         open={toast}
         autoHideDuration={6000}
         onClose={() => setToast(false)}
-        message={"Message Sent"}
+        message={"Job application was sent to ConsoleDot"}
       />
     </Layout>
   );
