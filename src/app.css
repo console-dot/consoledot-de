@@ -7,11 +7,35 @@
 .Typewriter__wrapper {
   margin: 0;
   margin-bottom: 0px;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 0.00938em;
   min-height: 180px;
   display: block;
+}
+
+.hoverImage:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heartbeat-img {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+  animation: heartbeat 1.5s infinite;
 }

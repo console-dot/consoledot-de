@@ -2,8 +2,8 @@ import {
   Container,
   Grid,
   Typography,
-  List,
-  ListItem,
+  Card,
+  CardContent,
 } from '@mui/material';
 
 export const About = () => {
@@ -117,7 +117,7 @@ export const About = () => {
       <Typography variant='h5' component={'h2'} mb={1}>
         WHO WE ARE
       </Typography>
-      <Typography variant='body1' component={'p'} mb={3}>
+      <Typography variant='body1' component={'p'} mb={7}>
         ConsoleDot represents the connected world, where we leverage the latest
         advancements in information technology to create innovative solutions.
         Our team of experts is passionate about crafting software solutions that
@@ -125,72 +125,104 @@ export const About = () => {
         services and technical expertise, we are committed to helping our
         clients thrive in the digital era.
       </Typography>
-      <Typography variant='h5' component={'h2'} mb={1}>
+      <Typography variant='h4' component={'h2'} mb={1} textAlign={'center'}>
         OUR SERVICES
       </Typography>
-      <Typography variant='body1' component={'p'} mb={3}>
+      <Typography variant='body1' component={'p'} mb={3} textAlign={'center'}>
         We offer a wide array of services to address the diverse needs of our
         clients:
       </Typography>
-      <List>
-        <ListItem>
-          <Typography variant='body1' component={'p'} mb={3}>
-            <span style={{ fontWeight: 700 }}>Web App Development:</span>{' '}
-            Harness the power of the web with our dynamic and secure web
-            applications. We build customized solutions that provide seamless
-            user experiences and drive business growth.
-          </Typography>
-        </ListItem>
-        <ListItem>
-          <Typography variant='body1' component={'p'} mb={3}>
-            <span style={{ fontWeight: 700 }}>Mobile App Development:</span>{' '}
-            Reach your audience on the go with our cutting-edge mobile
-            applications. From intuitive user interfaces to robust
-            functionality, we create engaging experiences on iOS and Android
-            platforms.
-          </Typography>
-        </ListItem>
-        <ListItem>
-          <Typography variant='body1' component={'p'} mb={3}>
-            <span style={{ fontWeight: 700 }}>Blockchain Development:</span>{' '}
-            Explore the potential of blockchain technology to revolutionize your
-            business operations. Our experts develop secure and transparent
-            blockchain solutions, enabling trust and efficiency across various
-            industries.
-          </Typography>
-        </ListItem>
-        <ListItem>
-          <Typography variant='body1' component={'p'} mb={3}>
-            <span style={{ fontWeight: 700 }}>
-              Artificial Intelligence (AI):
-            </span>{' '}
-            Unleash the power of AI to gain valuable insights and enhance
-            decision-making. Our AI solutions leverage machine learning, natural
-            language processing, and computer vision to automate processes and
-            create intelligent systems.
-          </Typography>
-        </ListItem>
-        <ListItem>
-          <Typography variant='body1' component={'p'} mb={3}>
-            <span style={{ fontWeight: 700 }}>
-              Cross-Platform App Development:
-            </span>{' '}
-            Maximize your reach and reduce development costs with our
-            cross-platform app development services. We utilize modern
-            frameworks to build versatile applications that work seamlessly
-            across multiple devices.
-          </Typography>
-        </ListItem>
-        <ListItem>
-          <Typography variant='body1' component={'p'} mb={3}>
-            <span style={{ fontWeight: 700 }}>Software Development:</span> As a
-            full stack development company, we provide end-to-end software
-            development services. From conceptualization to deployment, our team
-            delivers robust, scalable, and secure software solutions tailored to
-            your unique requirements.
-          </Typography>
-        </ListItem>
-      </List>
+      <Grid container spacing={2}>
+        <Grid item md={4} sm={12}>
+          <Card sx={{ background: '#224575', color: '#fff', p: 3 }}>
+            <CardContent>
+              <Typography variant='h5' component={'p'}>
+                Web App Development
+              </Typography>
+              <Typography variant='body1' component={'p'}>
+                Harness the power of the web with our dynamic and secure web
+                applications. We build customized solutions that provide
+                seamless user experiences and drive business growth.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item md={4} sm={12}>
+          <Card sx={{ background: '#224575', color: '#fff', p: 3 }}>
+            <CardContent>
+              <Typography variant='h5' component={'p'}>
+                Mobile App Development
+              </Typography>
+              <Typography variant='body1' component={'p'}>
+                Reach your audience on the go with our cutting-edge mobile
+                applications. From intuitive user interfaces to robust
+                functionality, we create engaging experiences on iOS and Android
+                platforms.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item md={4} sm={12}>
+          <Card sx={{ background: '#224575', color: '#fff', p: 3 }}>
+            <CardContent>
+              <Typography variant='h5' component={'p'}>
+                Blockchain Development
+              </Typography>
+              <Typography variant='body1' component={'p'}>
+                Explore the potential of blockchain technology to revolutionize
+                your business operations. Our experts develop secure and
+                transparent blockchain solutions, enabling trust and efficiency
+                across various industries.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item md={4} sm={12}>
+          <Card sx={{ background: '#224575', color: '#fff', p: 3 }}>
+            <CardContent>
+              <Typography variant='h5' component={'p'}>
+                Artificial Intelligence (AI)
+              </Typography>
+              <Typography variant='body1' component={'p'}>
+                Unleash the power of AI to gain valuable insights and enhance
+                decision-making. Our AI solutions leverage machine learning,
+                natural language processing, and computer vision to automate
+                processes and create intelligent systems.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item md={4} sm={12}>
+          <Card sx={{ background: '#224575', color: '#fff', p: 3 }}>
+            <CardContent>
+              <Typography variant='h5' component={'p'}>
+                Cross-Platform App Development
+              </Typography>
+              <Typography variant='body1' component={'p'}>
+                Maximize your reach and reduce development costs with our
+                cross-platform app development services. We utilize modern
+                frameworks to build versatile applications that work seamlessly
+                across multiple devices.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item md={4} sm={12}>
+          <Card sx={{ background: '#224575', color: '#fff', p: 3 }}>
+            <CardContent>
+              <Typography variant='h5' component={'p'}>
+                Software Development
+              </Typography>
+              <Typography variant='body1' component={'p'}>
+                As a full stack development company, we provide end-to-end
+                software development services. From conceptualization to
+                deployment, our team delivers robust, scalable, and secure
+                software solutions tailored to your unique requirements.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
     </Container>
   );
 };
