@@ -1,5 +1,4 @@
 import { Box } from '@mui/material';
-import { useRef } from 'react';
 
 export const Loading = () => {
   return (
