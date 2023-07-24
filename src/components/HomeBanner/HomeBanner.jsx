@@ -71,10 +71,11 @@ export const HomeBanner = ({ setShow }) => {
               borderRadius: 30,
               width: 160,
               height: 160,
+              border:'1px solid #195E7F'
             }}
           />
           <Typography
-            sx={{ fontFamily: 'monospace', fontWeight: 700 }}
+            sx={{  fontWeight: 700 }}
             variant='h3'
             component='h1'
           >
@@ -82,7 +83,7 @@ export const HomeBanner = ({ setShow }) => {
             <span style={{ color: '#224575' }}>DOT</span>
           </Typography>
           <Typography
-            sx={{ fontFamily: 'monospace', fontWeight: 700 }}
+            sx={{  fontWeight: 700 }}
             variant='h6'
             component='h2'
             mb={2}
